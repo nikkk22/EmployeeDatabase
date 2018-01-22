@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93637DB4-32E1-44BF-99CA-59FB53CD2FE3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\UI.exe.config" />
+    <None Include="bin\Debug\UI.vshost.exe.config" />
+    <None Include="bin\Debug\UI.vshost.exe.manifest" />
+    <None Include="plugins\bootstrap-select\css\bootstrap-select.css.map" />
+    <None Include="plugins\bootstrap-select\js\bootstrap-select.js.map" />
+    <None Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="plugins\jquery-validation\localization\messages_az" />
+    <None Include="plugins\jquery\jquery.min.map" />
+    <None Include="plugins\node-waves\waves.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\UI.vshost.exe" />
+    <Content Include="css\materialize.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="css\themes\all-themes.css" />
+    <Content Include="css\themes\all-themes.min.css" />
+    <Content Include="css\themes\theme-amber.css" />
+    <Content Include="css\themes\theme-amber.min.css" />
+    <Content Include="css\themes\theme-black.css" />
+    <Content Include="css\themes\theme-black.min.css" />
+    <Content Include="css\themes\theme-blue-grey.css" />
+    <Content Include="css\themes\theme-blue-grey.min.css" />
+    <Content Include="css\themes\theme-blue.css" />
+    <Content Include="css\themes\theme-blue.min.css" />
+    <Content Include="css\themes\theme-brown.css" />
+    <Content Include="css\themes\theme-brown.min.css" />
+    <Content Include="css\themes\theme-cyan.css" />
+    <Content Include="css\themes\theme-cyan.min.css" />
+    <Content Include="css\themes\theme-deep-orange.css" />
+    <Content Include="css\themes\theme-deep-orange.min.css" />
+    <Content Include="css\themes\theme-deep-purple.css" />
+    <Content Include="css\themes\theme-deep-purple.min.css" />
+    <Content Include="css\themes\theme-green.css" />
+    <Content Include="css\themes\theme-green.min.css" />
+    <Content Include="css\themes\theme-grey.css" />
+    <Content Include="css\themes\theme-grey.min.css" />
+    <Content Include="css\themes\theme-indigo.css" />
+    <Content Include="css\themes\theme-indigo.min.css" />
+    <Content Include="css\themes\theme-light-blue.css" />
+    <Content Include="css\themes\theme-light-blue.min.css" />
+    <Content Include="css\themes\theme-lime.css" />
+    <Content Include="css\themes\theme-lime.min.css" />
+    <Content Include="css\themes\theme-orange.css" />
+    <Content Include="css\themes\theme-orange.min.css" />
+    <Content Include="css\themes\theme-pink.css" />
+    <Content Include="css\themes\theme-pink.min.css" />
+    <Content Include="css\themes\theme-purple.css" />
+    <Content Include="css\themes\theme-purple.min.css" />
+    <Content Include="css\themes\theme-red.css" />
+    <Content Include="css\themes\theme-red.min.css" />
+    <Content Include="css\themes\theme-teal.css" />
+    <Content Include="css\themes\theme-teal.min.css" />
+    <Content Include="css\themes\theme-yellow.css" />
+    <Content Include="css\themes\theme-yellow.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\user-img-background.jpg" />
+    <Content Include="images\user.png" />
+    <Content Include="js\admin.js" />
+    <Content Include="js\demo.js" />
+    <Content Include="js\pages\forms\form-validation.js" />
+    <Content Include="pages\UI\AddEmp.html" />
+    <Content Include="plugins\animate-css\animate.css" />
+    <Content Include="plugins\animate-css\animate.min.css" />
+    <Content Include="plugins\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="plugins\bootstrap-select\css\bootstrap-select.min.css" />
+    <Content Include="plugins\bootstrap-select\js\bootstrap-select.js" />
+    <Content Include="plugins\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ar_AR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ar_AR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-bg_BG.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-bg_BG.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-cro_CRO.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-cro_CRO.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-cs_CZ.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-cs_CZ.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-da_DK.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-da_DK.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-de_DE.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-de_DE.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-en_US.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-en_US.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-es_CL.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-es_CL.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-eu.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-eu.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fa_IR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fa_IR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fi_FI.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fi_FI.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fr_FR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-fr_FR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-hu_HU.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-hu_HU.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-id_ID.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-id_ID.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-it_IT.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-it_IT.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ko_KR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ko_KR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-lt_LT.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-lt_LT.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-nb_NO.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-nb_NO.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-nl_NL.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-nl_NL.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pl_PL.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pl_PL.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pt_BR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pt_BR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pt_PT.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-pt_PT.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ro_RO.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ro_RO.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ru_RU.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ru_RU.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sk_SK.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sk_SK.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sl_SI.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sl_SI.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sv_SE.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-sv_SE.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-tr_TR.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-tr_TR.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ua_UA.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-ua_UA.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-zh_CN.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-zh_CN.min.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-zh_TW.js" />
+    <Content Include="plugins\bootstrap-select\js\i18n\defaults-zh_TW.min.js" />
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="plugins\bootstrap\js\npm.js" />
+    <Content Include="plugins\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="plugins\jquery-steps\jquery.steps.css" />
+    <Content Include="plugins\jquery-steps\jquery.steps.js" />
+    <Content Include="plugins\jquery-steps\jquery.steps.min.js" />
+    <Content Include="plugins\jquery-validation\additional-methods.js" />
+    <Content Include="plugins\jquery-validation\jquery.validate.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ar.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_bg.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_bn_BD.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ca.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_cs.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_da.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_de.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_el.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_es.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_es_PE.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_et.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_eu.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_fa.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_fi.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_fr.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ge.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_gl.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_he.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_hr.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_hu.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_hy_AM.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_id.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_is.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_it.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ja.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ka.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_kk.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ko.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_lt.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_lv.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_mk.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_my.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_nl.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_no.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_pl.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ro.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_ru.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_si.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_sk.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_sl.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_sr.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_sv.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_th.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_tj.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_tr.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_uk.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_vi.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_zh.js" />
+    <Content Include="plugins\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="plugins\jquery-validation\localization\methods_de.js" />
+    <Content Include="plugins\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="plugins\jquery-validation\localization\methods_fi.js" />
+    <Content Include="plugins\jquery-validation\localization\methods_nl.js" />
+    <Content Include="plugins\jquery-validation\localization\methods_pt.js" />
+    <Content Include="plugins\jquery\jquery.js" />
+    <Content Include="plugins\jquery\jquery.min.js" />
+    <Content Include="plugins\node-waves\waves.css" />
+    <Content Include="plugins\node-waves\waves.js" />
+    <Content Include="plugins\node-waves\waves.min.css" />
+    <Content Include="plugins\node-waves\waves.min.js" />
+    <Content Include="plugins\sweetalert\sweetalert-dev.js" />
+    <Content Include="plugins\sweetalert\sweetalert.css" />
+    <Content Include="plugins\sweetalert\sweetalert.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
