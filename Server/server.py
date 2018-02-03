@@ -1,4 +1,7 @@
 import socket
+import re
+import pymongo
+from pymongo import MongoClient
 
 HOST, PORT = '', 52557
 #payLoadData = '{"items": [{"id": "Open", "label":"Open"},{"id": "OpenNew", "label": "Open New"},\
@@ -14,13 +17,47 @@ server_socket.bind((HOST, PORT))
 server_socket.listen(1)
 print ('Starting web-server on port ' + str(PORT))
 while True:
+    #Connecting to mongodb
+    client = MongoClient()
+    #Opening database
+    db = client.EmployeeDatabase
+    
     client_socket, client_address = server_socket.accept()
     request = client_socket.recv(1024)
     strr = request.decode()
-    print (repr(strr))
-    indexFound = strr.find("firstName=")
-    print (strr[indexFound:])
+    #print (repr(strr))
+    indexOPAdd = strr.find("fName")
+    indexHTTP = strr.find(" HTTP");
+    fetchData = strr[indexOPAdd:indexHTTP]
+    print (fetchData)
+    matchedData = re.search("fName=(\w+)", fetchData)
+    firstName = matchedData.group(1)
+    matchedData = re.search("mName=(\w+)", fetchData)
+    middleName = matchedData.group(1)
+    matchedData = re.search("lName=(\w+)", fetchData)
+    lastName = matchedData.group(1)
+    matchedData = re.search("email=(\w+)", fetchData)
+    email = matchedData.group(1)
+    matchedData = re.search("contactNumber=(\w+)", fetchData)
+    contactNumber = matchedData.group(1)
+    matchedData = re.search("manager=(\w+)", fetchData)
+    manager = matchedData.group(1)
+    matchedData = re.search("description=(\w+)", fetchData)
+    description = matchedData.group(1)
+    
+    #Create a dictionary
+    empData={}
+    empData['firstName'] = firstName
+    empData['lastName'] = lastName
+    empData['middleName'] = middleName
+    empData['email'] = email
+    empData['contactNumber'] = contactNumber
+    empData['manager'] = manager
+    empData['description'] = description
+    #insert into mongodb
+    db.empDB.insert_one(empData)
 
+    
     http_response = """\
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
