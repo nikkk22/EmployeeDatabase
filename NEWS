@@ -3,5 +3,6 @@ Record the development activity
 v1.0
 
 -Adding folders and basic code.
--Added UI sample template for Add new emplyee. (Check UI\pages\UI\addEmp.html)
+-Added UI sample template for Add new employee. (Check UI\pages\UI\addEmp.html)
 -Added initial single threaded server code in python.
+-Added get request instead of post.
