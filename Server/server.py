@@ -26,43 +26,48 @@ while True:
     request = client_socket.recv(1024)
     strr = request.decode()
     #print (repr(strr))
-    indexOPAdd = strr.find("fName")
-    indexHTTP = strr.find(" HTTP");
-    fetchData = strr[indexOPAdd:indexHTTP]
-    print (fetchData)
-    matchedData = re.search("fName=(\w+)", fetchData)
-    firstName = matchedData.group(1)
-    matchedData = re.search("mName=(\w+)", fetchData)
-    middleName = matchedData.group(1)
-    matchedData = re.search("lName=(\w+)", fetchData)
-    lastName = matchedData.group(1)
-    matchedData = re.search("email=(\w+)", fetchData)
-    email = matchedData.group(1)
-    matchedData = re.search("contactNumber=(\w+)", fetchData)
-    contactNumber = matchedData.group(1)
-    matchedData = re.search("manager=(\w+)", fetchData)
-    manager = matchedData.group(1)
-    matchedData = re.search("description=(\w+)", fetchData)
-    description = matchedData.group(1)
-    
-    #Create a dictionary
-    empData={}
-    empData['firstName'] = firstName
-    empData['lastName'] = lastName
-    empData['middleName'] = middleName
-    empData['email'] = email
-    empData['contactNumber'] = contactNumber
-    empData['manager'] = manager
-    empData['description'] = description
-    #insert into mongodb
-    db.empDB.insert_one(empData)
+    if (strr.find("AddEmp") != -1):
+        print("Got request to add an employee detail")
+        indexOPAdd = strr.find("fName")
+        indexHTTP = strr.find(" HTTP")
+        fetchData = strr[indexOPAdd:indexHTTP]
+        matchedData = re.search("fName=(\w+)", fetchData)
+        firstName = matchedData.group(1)
+        matchedData = re.search("mName=(\w+)", fetchData)
+        middleName = matchedData.group(1)
+        matchedData = re.search("lName=(\w+)", fetchData)
+        lastName = matchedData.group(1)
+        matchedData = re.search("email=(\w+)", fetchData)
+        email = matchedData.group(1)
+        matchedData = re.search("contactNumber=(\w+)", fetchData)
+        contactNumber = matchedData.group(1)
+        matchedData = re.search("manager=(\w+)", fetchData)
+        manager = matchedData.group(1)
+        matchedData = re.search("description=(\w+)", fetchData)
+        description = matchedData.group(1)
 
+        #Create a dictionary
+        empData={}
+        empData['firstName'] = firstName
+        empData['lastName'] = lastName
+        empData['middleName'] = middleName
+        empData['email'] = email
+        empData['contactNumber'] = contactNumber
+        empData['manager'] = manager
+        empData['description'] = description
+        #insert into mongodb
+        db.empDB.insert_one(empData)
+    elif (strr.find("Employee") != -1):
+        print("Got request to search an employee detail")
+        print ("Yet to be IMPLEMENTED after front end is done")
+    else:
+        print("The request is not valid")
     
     http_response = """\
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 
-""" + "hey! I am back with response"
+""" + str(empData)
 
     client_socket.sendall(http_response.encode())
     client_socket.close()
