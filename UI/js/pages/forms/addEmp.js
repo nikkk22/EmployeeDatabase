@@ -29,7 +29,7 @@ $(function () {
 				description:$('#description').val(),
 				
 			}
-			alert(JSON.stringify(data));
+			alert(JSON.stringify(empData));
 			
 			$.ajax({
 				url: 'localhost:52557/AddEmp',
