@@ -7,3 +7,4 @@ v1.0
 -Added initial single threaded server code in python.
 -Added get request instead of post.
 -Added code to insert data into mongodb.
+-Removed hardcoded first name and last name in the URL
