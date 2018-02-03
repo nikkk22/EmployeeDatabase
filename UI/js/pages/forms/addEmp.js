@@ -18,7 +18,7 @@ $(function () {
             $(element).parents('.form-group').append(error);
         },
 		 submitHandler: function(form) {
-			// call your function
+			// call your function			
 			var empData = {
 				fName:$('#fName').val(),
 				mName:$('#mName').val(),
@@ -29,14 +29,17 @@ $(function () {
 				description:$('#description').val(),
 				
 			}
-			alert(JSON.stringify(data));
+			alert(JSON.stringify(empData));
 			
 			$.ajax({
-				url: 'localhost:52557/AddEmp',
-				type: 'post',
-				dataType: 'json',
+				url: 'http://localhost:52557/AddEmp?fName=1&mName=1',
+				type: 'get',
+				//dataType: 'json',
 				success: function (data) {
-					alert('Data Saved');
+					alert('Success' + data);
+				},
+				error: function (data) {
+					alert('Error:' + data);
 				},
 				data: empData
 			});
