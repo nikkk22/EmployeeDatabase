@@ -32,7 +32,7 @@ $(function () {
 			alert(JSON.stringify(empData));
 			
 			$.ajax({
-				url: 'http://localhost:52557/AddEmp?fName=1&mName=1',
+				url: 'http://localhost:52557/AddEmp',
 				type: 'get',
 				//dataType: 'json',
 				success: function (data) {
