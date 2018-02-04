@@ -10,3 +10,4 @@ v1.0
 -Removed hard coded first name and last name in the URL
 -Added code to send data to client to display on web page.
 -Implemented "AddEmp" operation. stub present for "SearchEmployee" operation.
+-Implemented "Employee" operation. Need to be tested once client implements the corresponding operation and sends the data.
