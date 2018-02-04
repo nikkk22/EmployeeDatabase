@@ -11,3 +11,4 @@ v1.0
 -Added code to send data to client to display on web page.
 -Implemented "AddEmp" operation. stub present for "SearchEmployee" operation.
 -Implemented "Employee" operation. Need to be tested once client implements the corresponding operation and sends the data.
+-Changed uniqueness from firstName to email.

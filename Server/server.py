@@ -56,14 +56,14 @@ while True:
         empData['manager'] = manager
         empData['description'] = description
         #search for the data if exists in mongodb
-        if (db.empDB.find({"firstName" : firstName}).count() > 0):
+        if (db.empDB.find({"email" : email}).count() > 0):
             print ("Found an element already. Not inserting")
         else:
             #insert into mongodb
             db.empDB.insert_one(empData)
     elif (strr.find("Employee") != -1):
         print("Got request to search an employee detail")
-        indexOPSearch = strr.find("fName")
+        indexOPSearch = strr.find("email")
         indexHTTP = strr.find(" HTTP")
         searchData = strr[indexOPSearch:indexHTTP]
         matchedData = re.search("email=(\w+)", searchData)
@@ -73,7 +73,6 @@ while True:
             ret = db.empDB.find({"email" : email})
     elif (strr != ''):
         print("The request is not valid")
-        print (repr(strr))
     
     http_response = """\
 HTTP/1.1 200 OK
