@@ -3,7 +3,19 @@ Record the development activity
 v1.0
 
 -Adding folders and basic code.
+<<<<<<< HEAD
 -Added UI sample template for Add new employee. (Check UI\pages\UI\addEmp.html)
 -Added initial single threaded server code in python.
 -Made get call in-place of post call.
 -Pass gender in ajax call for adding employee
+=======
+-Added UI sample template for Add new employee.
+-Added initial single threaded server code in python.
+-Added get request instead of post.
+-Added code to insert data into mongodb.
+-Removed hard coded first name and last name in the URL
+-Added code to send data to client to display on web page.
+-Implemented "AddEmp" operation. stub present for "SearchEmployee" operation.
+-Implemented "Employee" operation. Need to be tested once client implements the corresponding operation and sends the data.
+-Changed uniqueness from firstName to email.
+>>>>>>> origin/master
