@@ -27,7 +27,7 @@ $(function () {
 				contactNumber:$('#contactNumber').val(),
 				manager:$('#manager').val(),
 				description:$('#description').val(),
-				
+				gender:$('input[name=gender]:checked').val(),
 			}
 			alert(JSON.stringify(empData));
 			
