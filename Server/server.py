@@ -64,7 +64,7 @@ while True:
         else:
             #insert into mongodb
             db.empDB.insert_one(empData)
-    elif (strr.find("Employee") != -1):
+    elif (strr.find("SearchEmployee") != -1):
         print("Got request to search an employee detail")
         indexOPSearch = strr.find("email")
         indexHTTP = strr.find(" HTTP")
