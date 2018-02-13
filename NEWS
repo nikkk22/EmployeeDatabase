@@ -6,3 +6,4 @@ v1.0
 -Added UI sample template for Add new employee. (Check UI\pages\UI\addEmp.html)
 -Added initial single threaded server code in python.
 -Made get call in-place of post call.
+-Pass gender in ajax call for adding employee
