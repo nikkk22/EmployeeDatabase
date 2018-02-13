@@ -14,3 +14,4 @@ v1.0
 -Implemented "Employee" operation. Need to be tested once client implements the corresponding operation and sends the data.
 -Changed uniqueness from firstName to email.
 -Pass gender in ajax call for adding employee.
+-Remove email validation over email field (implicit it is @metacube.com)
