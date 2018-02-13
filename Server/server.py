@@ -45,7 +45,9 @@ while True:
         manager = matchedData.group(1)
         matchedData = re.search("description=(\w+)", fetchData)
         description = matchedData.group(1)
-
+        matchedData = re.search("gender=(\w+)", fetchData)
+        gender = matchedData.group(1)
+    
         #Create a dictionary
         empData={}
         empData['firstName'] = firstName
@@ -55,6 +57,7 @@ while True:
         empData['contactNumber'] = contactNumber
         empData['manager'] = manager
         empData['description'] = description
+        empData['gender'] = gender
         #search for the data if exists in mongodb
         if (db.empDB.find({"email" : email}).count() > 0):
             print ("Found an element already. Not inserting")
