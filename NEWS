@@ -15,3 +15,4 @@ v1.0
 -Changed uniqueness from firstName to email.
 -Pass gender in ajax call for adding employee.
 -Remove email validation over email field (implicit it is @metacube.com)
+-Search the mongodb and send the appropriate data to client.
