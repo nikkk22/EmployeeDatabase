@@ -96,8 +96,11 @@
     <Content Include="images\user.png" />
     <Content Include="js\admin.js" />
     <Content Include="js\demo.js" />
+    <Content Include="js\pages\forms\addEmp.js" />
     <Content Include="js\pages\forms\form-validation.js" />
-    <Content Include="pages\UI\AddEmp.html" />
+    <Content Include="js\pages\forms\home.js" />
+    <Content Include="pages\AdminUI\AddEmp.html" />
+    <Content Include="pages\UserUI\Home.html" />
     <Content Include="plugins\animate-css\animate.css" />
     <Content Include="plugins\animate-css\animate.min.css" />
     <Content Include="plugins\bootstrap-select\css\bootstrap-select.css" />
