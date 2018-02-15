@@ -41,13 +41,13 @@ Access-Control-Allow-Origin: *
     client_socket.sendall(http_response.encode())
     client_socket.close()
 
-def sendNoDataPresent(client_socket):
+def sendNoDataPresent(client_socket, nonames):
     print ("Sending back to client")
     http_response = """\
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 
-""" + "No data present"
+""" + str(nonames)
 
     client_socket.sendall(http_response.encode())
     client_socket.close()
@@ -122,26 +122,30 @@ while True:
         searchData = strr[indexOPSearch:indexHTTP]
         matchedData = re.search("email=(\w+)", searchData)
         email = matchedData.group(1)
-        if (db.empDB.find({"email" : email}).count() > 0):
+        if (db.empDB.find({"email" : email}).count() == 1):
             print ("Data found. Returning to client")
             ret = db.empDB.find({"email" : email})
             sendEmployeeRecord(client_socket, ret)
-        else:
+        elif (db.empDB.find({"email" : email}).count() == 0):
             found = 0
-            count = 0
+            #count = 0
+            emailOne = ""
             matchedNames = {}
             ret = db.empDB.find({})
             for r in ret:
                 if (r['email'].find(email) != -1):
                     print ("found the data")
-                    found = 1
-                    matchedNames[count] = r['email']
-                    count = count + 1
+                    found = found + 1
+                    emailOne = r['email']
+                    matchedNames[r['email']] = r['manager']
+                    #count = count + 1
             if (found == 0):
-                sendNoDataPresent(client_socket)
+                sendNoDataPresent(client_socket, matchedNames)
+            elif (found == 1):
+                ret = db.empDB.find({"email" : emailOne})
+                sendEmployeeRecord(client_socket, ret)
             else:
                 sendNames(client_socket, matchedNames)
     elif (strr != ''):
         print("The request is not valid")
-
 
