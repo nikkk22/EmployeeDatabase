@@ -18,3 +18,5 @@ v1.0
 -Search the mongodb and send the appropriate data to client.
 -Add Search page and sample table
 -Changed server to send the complete record if email/substring matches a single record.
+-Empty popup added for showing employee detail (need to fill later)
+-Code to render list of employee dynamically
