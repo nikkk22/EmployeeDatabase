@@ -25,6 +25,8 @@ $(function () {
                 type: 'get',
                 success: function (data) {
 					console.log('Success' + data);
+					data = data.replace(/'/g,'"');
+					data = JSON.parse(data);
 					if(data.length==0)
 						alert('No match found');
 					else if(data.length==1)		

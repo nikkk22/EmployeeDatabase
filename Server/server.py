@@ -36,7 +36,7 @@ def sendEmployeeRecord(client_socket, record):
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 
-""" + str(record[0])
+""" + str(record)
 
     client_socket.sendall(http_response.encode())
     client_socket.close()
@@ -124,28 +124,46 @@ while True:
         email = matchedData.group(1)
         if (db.empDB.find({"email" : email}).count() == 1):
             print ("Data found. Returning to client")
-            ret = db.empDB.find({"email" : email})
-            sendEmployeeRecord(client_socket, ret)
+            ret_ = list()
+            ret = {}
+            r_ = db.empDB.find({"email" : email})
+            for r in r_:
+                ret["Email"] = r['email']
+                ret["Manager"] = r['manager']
+                ret["First Name"] = r['firstName']
+                ret["Last Name"] = r['lastName']
+                ret["Contact Number"] = r['contactNumber']
+                ret["Description"] = r['description']
+                ret["Gender"] = r['gender']
+                ret["Middle Name"] = r['middleName']
+            ret_.append(ret)
+            sendEmployeeRecord(client_socket, ret_)
         elif (db.empDB.find({"email" : email}).count() == 0):
             found = 0
-            #count = 0
+            count = 0
             emailOne = ""
             matchedNames = {}
+            matchedNames_=list()
             ret = db.empDB.find({})
             for r in ret:
                 if (r['email'].find(email) != -1):
                     print ("found the data")
                     found = found + 1
                     emailOne = r['email']
-                    matchedNames[r['email']] = r['manager']
-                    #count = count + 1
+                    #matchedNames[r['email']] = r['manager']
+                    matchedNames["email"] = r['email']
+                    matchedNames["manager"] = r['manager']
+                    matchedNames_.append(matchedNames)
+                    matchedNames = {}
+                    count = count + 1
             if (found == 0):
-                sendNoDataPresent(client_socket, matchedNames)
+                print("No data present")
+                sendNoDataPresent(client_socket, matchedNames_)
             elif (found == 1):
                 ret = db.empDB.find({"email" : emailOne})
                 sendEmployeeRecord(client_socket, ret)
             else:
-                sendNames(client_socket, matchedNames)
+                sendNames(client_socket, matchedNames_)
     elif (strr != ''):
         print("The request is not valid")
 
