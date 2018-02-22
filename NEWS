@@ -23,3 +23,4 @@ v1.0
 -Added functionality to pass an array instead of JSON string to facilitate rendering data on table.
 -UI enhancement (linking between pages)
 -Show data in table (irrespective of detail or multiple record)
+-Fixed server to handle "+" and convert into spaces.
