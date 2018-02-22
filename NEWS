@@ -21,3 +21,5 @@ v1.0
 -Empty popup added for showing employee detail (need to fill later)
 -Code to render list of employee dynamically
 -Added functionality to pass an array instead of JSON string to facilitate rendering data on table.
+-UI enhancement (linking between pages)
+-Show data in table (irrespective of detail or multiple record)

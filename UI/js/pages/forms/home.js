@@ -29,13 +29,13 @@ $(function () {
 					data = JSON.parse(data);
 					if(data.length==0)
 						alert('No match found');
-					else if(data.length==1)		
-					{
+					//else if(data.length==1)		
+					//{
 						//Fill Record details 
 						
 						//show popup with emp details
-						$('#empDetail').modal('show'); 	
-					}
+					//	$('#empDetail').modal('show'); 	
+					//}
 					else
 					{
 						//Fill Table

@@ -19,6 +19,11 @@
     <link href="../../plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <!-- Custom Css -->
     <link href="../../css/style.css" rel="stylesheet">
+	<style type="text/css">
+        table thead tr td {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="fp-page" style="max-width:90%">
 	<div class="modal" id="empDetail" tabindex="-1" role="dialog">
@@ -38,6 +43,7 @@
 	</div>
 		
     <div class="fp-box">
+		
         <div class="logo">
             <a href="javascript:void(0);">Meta<b>cube</b></a>
             <small>Employee Database</small>
@@ -67,7 +73,11 @@
             </div>
         </div>
         <br />
-        <div class="row clearfix">
+        
+	<div>
+		<a class="pull-right" style="color:white" href="../AdminUI/AddEmp.html">Add New Employee</a>		
+	</div>
+	<div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <!--<div class="header">
@@ -100,6 +110,7 @@
             </div>
         </div>
     </div>
+	
     <!-- Jquery Core Js -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap Core Js -->
