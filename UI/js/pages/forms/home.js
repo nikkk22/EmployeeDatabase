@@ -25,6 +25,8 @@ $(function () {
                 type: 'get',
                 success: function (data) {
 					console.log('Success' + data);
+					//Clear Table
+					$("#empTable").empty();
 					data = data.replace(/'/g,'"');
 					data = JSON.parse(data);
 					if(data.length==0)

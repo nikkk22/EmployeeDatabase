@@ -154,8 +154,8 @@ while True:
                     found = found + 1
                     emailOne = r['email']
                     #matchedNames[r['email']] = r['manager']
-                    matchedNames["email"] = r['email']
-                    matchedNames["manager"] = r['manager']
+                    matchedNames["Email"] = r['email']
+                    matchedNames["Manager"] = r['manager']
                     matchedNames_.append(matchedNames)
                     matchedNames = {}
                     count = count + 1
