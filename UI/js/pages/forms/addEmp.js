@@ -17,7 +17,7 @@ $(function () {
         errorPlacement: function (error, element) {
             $(element).parents('.form-group').append(error);
         },
-		 submitHandler: function(form) {
+		submitHandler: function(form) {
 			// call your function			
 			var empData = {
 				fName:$('#fName').val(),
@@ -35,7 +35,15 @@ $(function () {
 				url: 'http://localhost:52557/AddEmp',
 				type: 'get',
 				//dataType: 'json',
-				success: function (data) {
+				success: function (data) {					
+				$('#fName').val('');
+				$('#mName').val('');
+				$('#lName').val('');
+				$('#email').val('');
+				$('#contactNumber').val('');
+				$('#manager').val('');
+				$('#description').val('');
+				$('#checkbox').checked(false);
 					alert('Success' + data);
 				},
 				error: function (data) {
