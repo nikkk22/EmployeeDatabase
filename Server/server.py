@@ -84,8 +84,9 @@ while True:
         middleName = matchedData.group(1)
         matchedData = re.search("lName=(\w+)", fetchData)
         lastName = matchedData.group(1)
-        matchedData = re.search("email=(\w+)", fetchData)
+        matchedData = re.search("email=([\w\.]+)", fetchData)
         email = matchedData.group(1)
+        print ("email is", email)
         matchedData = re.search("contactNumber=(\w+)", fetchData)
         contactNumber = matchedData.group(1)
         matchedData = re.search("manager=([\w+]+)", fetchData)
@@ -123,7 +124,7 @@ while True:
         indexOPSearch = strr.find("email")
         indexHTTP = strr.find(" HTTP")
         searchData = strr[indexOPSearch:indexHTTP]
-        matchedData = re.search("email=(\w+)", searchData)
+        matchedData = re.search("email=([\w+\.]+)", searchData)
         email = matchedData.group(1)
         if (db.empDB.find({"email" : email}).count() == 1):
             print ("Data found. Returning to client")
