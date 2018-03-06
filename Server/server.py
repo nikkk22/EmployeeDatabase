@@ -164,8 +164,23 @@ while True:
                 print("No data present")
                 sendNoDataPresent(client_socket, matchedNames_)
             elif (found == 1):
-                ret = db.empDB.find({"email" : emailOne})
-                sendEmployeeRecord(client_socket, ret)
+                ret_1 = list()
+                ret = {}
+                r_ = db.empDB.find({"email" : emailOne})
+                for r in r_:
+                    ret["Email"] = r['email']
+                    ret["Manager"] = r['manager']
+                    ret["First Name"] = r['firstName']
+                    ret["Last Name"] = r['lastName']
+                    ret["Contact Number"] = r['contactNumber']
+                    ret["Description"] = r['description']
+                    ret["Gender"] = r['gender']
+                    ret["Middle Name"] = r['middleName']
+                ret_1.append(ret)
+                sendEmployeeRecord(client_socket, ret_1)
+                #ret = db.empDB.find({"email" : emailOne})
+                #print ("found is 1 with emailOne", emailOne)
+                #sendEmployeeRecord(client_socket, ret)
             else:
                 sendNames(client_socket, matchedNames_)
     elif (strr != ''):
