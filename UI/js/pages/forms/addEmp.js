@@ -43,7 +43,7 @@ $(function () {
 				$('#contactNumber').val('');
 				$('#manager').val('');
 				$('#description').val('');
-				$('#checkbox').checked(false);
+				$('#checkbox').prop('checked', false);
 					alert('Success' + data);
 				},
 				error: function (data) {

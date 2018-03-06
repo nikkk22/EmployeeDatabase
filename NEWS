@@ -24,3 +24,4 @@ v1.0
 -UI enhancement (linking between pages)
 -Show data in table (irrespective of detail or multiple record)
 -Fixed server to handle "+" and convert into spaces.
+-Fixed and released v_01.
